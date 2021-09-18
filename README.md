@@ -14,4 +14,5 @@ Analyse tool.
 
 # Development process
 1. Run OLTP/establish.sql to establish the tables in the MySQL database
-2. Run application/main.py
+2. Modify your own database configurations at OLTP/databaseService.py
+3. Run application/main.py

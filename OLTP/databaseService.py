@@ -27,6 +27,7 @@ pd.set_option('display.width', None)
 
 
 def insert_record(db_name: str, record: dict):
+    record['TableLastDate'] = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
     columns = '('
     values = '('
     for k, v in record.items():
@@ -58,6 +59,7 @@ def insert_record(db_name: str, record: dict):
 
 
 def update_record(db_name: str, id: int, changes: dict):
+    changes['TableLastDate'] = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
     entities = ''
     for k, v in changes.items():
         if isinstance(v, str):
@@ -76,6 +78,7 @@ def show_columns(db_name: str):
     cur.execute(get_sql)
     get_df = pd.DataFrame(cur.fetchall())
     print(get_df)
+    return get_df
 
 
 def show_data(db_name: str):
@@ -83,6 +86,7 @@ def show_data(db_name: str):
     cur.execute(get_sql)
     get_df = pd.DataFrame(cur.fetchall())
     print(get_df)
+    return get_df
 
 
 if __name__ == '__main__':

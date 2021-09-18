@@ -11,6 +11,7 @@ CREATE TABLE IF NOT EXISTS `patient`(
    `Floor` INTEGER,
    `DischargeDate` DATETIME,
    `TableLastDate` DATETIME,
+   `HospitalId` INT UNSIGNED,
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -63,6 +64,7 @@ CREATE TABLE IF NOT EXISTS `treatment`(
    `SurgeryDate` DATETIME,
    `SurgeryResult` VARCHAR(255),
    `TableLastDate` DATETIME,
+   `RegistrationId` INT UNSIGNED,
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -95,6 +97,7 @@ CREATE TABLE IF NOT EXISTS `invoice`(
    `BillToInsurance` VARCHAR(255),
    `CostToPatient` VARCHAR(255),
    `TableLastDate` DATETIME,
+   `RegistrationId` INT UNSIGNED,
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -103,6 +106,7 @@ CREATE TABLE IF NOT EXISTS `payment`(
    `PaymentDate` DATETIME,
    `Amount` INTEGER,
    `TableLastDate` DATETIME,
+   `InvoiceId` INT UNSIGNED,
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -121,6 +125,12 @@ CREATE TABLE IF NOT EXISTS `patient_doctor`(
 CREATE TABLE IF NOT EXISTS `patient_treatment`(
    `PatientId` INT UNSIGNED,
    `TreatmentId` INT UNSIGNED,
+   `TableLastDate` DATETIME
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+CREATE TABLE IF NOT EXISTS `patient_disease`(
+   `PatientId` INT UNSIGNED,
+   `DiseaseId` INT UNSIGNED,
    `TableLastDate` DATETIME
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
