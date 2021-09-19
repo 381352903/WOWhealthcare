@@ -5,10 +5,12 @@ from services import doctorService
 from OLTP import databaseService
 from test.test_data import test_databaseService
 
+
 _GUEST = '0'
 _PATIENT = '1'
 _DOCTOR = '2'
 _ADMIN = '3'
+
 
 '''
     @Description:
@@ -37,33 +39,26 @@ def read_dict():
 if __name__ == '__main__':
     command = ''
     identity = _GUEST
+    account_id = -1
     while command != 'exit':
         while identity != _PATIENT and identity != _DOCTOR and identity != _ADMIN:
             identity = input('Who are you?(Patient: 1 or Doctor: 2 or Admin: 3) \n')
         print('What do you want to do: \n')
-        if identity == _PATIENT:
+        if identity == _PATIENT and account_id == -1:
             command = input(
                             '1. You are a new patient(Register an account)      \n'
                             '2. You have an account(Login)                      \n'
+                            '3. Show all patients                               \n'
                             )
             if command == '1':
-                databaseService.show_columns('patient')
-                patient_model = read_dict()
-                databaseService.insert_record('patient', patient_model)
+                patientService.register_patient()
             elif command == '2':
                 account_id = int(input('Input your id: \n'))
-                '''
-                    1. registration, waiting for the diagnose and treatment from doctor
-                    2. if the patient has invoices to pay, he can make payments for that
-                '''
-                command = input(
-                                '1. Make a registration for your treatment      \n'
-                                '2. Check my financial account                  \n'
-                                )
-                if command == '1':
-                    print('')
-                elif command == '2':
-                    print('')
+                patientService.patient_commands(account_id)
+            elif command == '3':
+                databaseService.show_data('patient')
+        elif identity == _PATIENT:
+            patientService.patient_commands(account_id)
         elif identity == _DOCTOR:
             '''
                 ???????????????????????????????????????????

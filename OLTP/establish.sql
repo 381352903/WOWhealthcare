@@ -81,6 +81,7 @@ CREATE TABLE IF NOT EXISTS `registration`(
    `Id` INT UNSIGNED AUTO_INCREMENT,
    `RegistrationDate` DATETIME,
    `RegistrationNumber` VARCHAR(255),
+   `PatientId` INT UNSIGNED,
    `TableLastDate` DATETIME,
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -89,24 +90,27 @@ CREATE TABLE IF NOT EXISTS `invoice`(
    `Id` INT UNSIGNED AUTO_INCREMENT,
    `InvoiceNumber` INTEGER,
    `InvoiceDate` DATETIME,
-   `LabCost` VARCHAR(255),
-   `DrugCost` VARCHAR(255),
-   `SurgeryCost` VARCHAR(255),
-   `BedUsageCost` VARCHAR(255),
-   `TotalCost` VARCHAR(255),
-   `BillToInsurance` VARCHAR(255),
-   `CostToPatient` VARCHAR(255),
+   `LabCost` INTEGER DEFAULT 0,
+   `DrugCost` INTEGER DEFAULT 0,
+   `SurgeryCost` INTEGER DEFAULT 0,
+   `BedUsageCost` INTEGER DEFAULT 0,
+   `TotalCost` INTEGER DEFAULT 0,
+   `BillToInsurance` INTEGER DEFAULT 0,
+   `CostToPatient` INTEGER DEFAULT 0,
    `TableLastDate` DATETIME,
    `RegistrationId` INT UNSIGNED,
+   `PatientId` INT UNSIGNED,
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `payment`(
    `Id` INT UNSIGNED AUTO_INCREMENT,
    `PaymentDate` DATETIME,
-   `Amount` INTEGER,
+   `Type` VARCHAR(255),
+   `Amount` INTEGER DEFAULT 0,
    `TableLastDate` DATETIME,
-   `InvoiceId` INT UNSIGNED,
+   `RegistrationId` INT UNSIGNED,
+   `PatientId` INT UNSIGNED,
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

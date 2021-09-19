@@ -27,7 +27,7 @@ pd.set_option('display.width', None)
 
 
 def insert_record(db_name: str, record: dict):
-    record['TableLastDate'] = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+    record['TableLastDate'] = str(get_cur_time())
     columns = '('
     values = '('
     for k, v in record.items():
@@ -59,7 +59,7 @@ def insert_record(db_name: str, record: dict):
 
 
 def update_record(db_name: str, id: int, changes: dict):
-    changes['TableLastDate'] = str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M"))
+    changes['TableLastDate'] = str(get_cur_time())
     entities = ''
     for k, v in changes.items():
         if isinstance(v, str):
@@ -87,6 +87,17 @@ def show_data(db_name: str):
     get_df = pd.DataFrame(cur.fetchall())
     print(get_df)
     return get_df
+
+
+def search_data(db_name: str, condition: str):
+    get_sql = 'select * from ' + db_name + ' where ' + condition
+    cur.execute(get_sql)
+    get_df = pd.DataFrame(cur.fetchall())
+    return get_df
+
+
+def get_cur_time():
+    return datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
 
 if __name__ == '__main__':
