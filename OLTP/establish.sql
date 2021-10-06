@@ -83,6 +83,7 @@ CREATE TABLE IF NOT EXISTS `registration`(
    `RegistrationNumber` VARCHAR(255),
    `PatientId` INT UNSIGNED,
    `TableLastDate` DATETIME,
+   `HasProcessed` BOOLEAN,
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

@@ -88,7 +88,7 @@ def show_data(db_name: str):
     print(get_df)
     return get_df
 
-
+# 'age > 17'
 def search_data(db_name: str, condition: str):
     get_sql = 'select * from ' + db_name + ' where ' + condition
     cur.execute(get_sql)

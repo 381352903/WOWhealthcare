@@ -67,7 +67,7 @@ if __name__ == '__main__':
             '''
             command = input(
                             '1. You are a new doctor(Register an account)   \n'
-                            '2. You have an doctor(Login)                   \n'
+                            '2. You have an doctor account(Login)                   \n'
                             )
             if command == '1':
                 databaseService.show_columns('doctor')
@@ -75,9 +75,13 @@ if __name__ == '__main__':
                 databaseService.insert_record('doctor', patient_model)
             elif command == '2':
                 '''
-                    1. diagnose a patient's disease for each registration
+                    医生能看现在他所管理的所有treatment
+                    也能看到registration，
+                    一次不显示太多regis
+                    regis已经有treatment的不显示
+                    1. diagnose a patient's disease for each treatment registration
                         i. only insert the newly found disease into the 'disease' database
-                    2. give a treatment for each registration(one-to-one)
+                    2. give a treatment for each treatment registration(one-to-one)
                         i. insert a new treatment record for each registration
                         ii. insert doctor_disease table
                         iii. insert patient_treatment table
