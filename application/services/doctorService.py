@@ -13,7 +13,7 @@ def initiate_treatment(account_id, registration_id):
     treatment_model = main.read_dict()
     treatment_id = databaseService.insert_record('treatment', treatment_model)
     print(databaseService.search_data('treatment', 'DoctorId=' + str(account_id)))
-    # update table: patient_treatment
+    # upd ate table: patient_treatment
     end_registration(registration_id, treatment_id)
 
 def update_treatment(treatment_id):
