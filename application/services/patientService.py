@@ -14,7 +14,6 @@ def register_patient():
     databaseService.insert_record('patient', patient_model)
     databaseService.show_data('patient')
 
-
 def registration_for_treatment(account_id):
     databaseService.show_columns('registration')
     registration_model = {'PatientId': account_id, 'RegistrationDate': str(databaseService.get_cur_time()),

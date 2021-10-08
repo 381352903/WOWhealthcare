@@ -60,36 +60,28 @@ if __name__ == '__main__':
         elif identity == _PATIENT:
             patientService.patient_commands(account_id)
         elif identity == _DOCTOR:
-            '''
-                ???????????????????????????????????????????
-                @@@@This part can be implemented by you@@@@
-                ???????????????????????????????????????????
-            '''
             command = input(
                             '1. You are a new doctor(Register an account)   \n'
                             '2. You have an doctor account(Login)                   \n'
                             )
             if command == '1':
-                databaseService.show_columns('doctor')
-                patient_model = read_dict()
-                databaseService.insert_record('doctor', patient_model)
+                patientService.register_doctor()
             elif command == '2':
+                account_id = int(input('Input your id: \n'))
+                patientService.doctor_commands(account_id)
                 '''
-                    医生能看现在他所管理的所有treatment
-                    也能看到registration，
-                    一次不显示太多regis
-                    regis已经有treatment的不显示
-                    1. diagnose a patient's disease for each treatment registration
+                    1. Show all treatment under this doctor
+                    2. Check available registration
+                    3. diagnose a patient's disease for each treatment registration
                         i. only insert the newly found disease into the 'disease' database
-                    2. give a treatment for each treatment registration(one-to-one)
+                    4. give a treatment for each treatment registration(one-to-one)
                         i. insert a new treatment record for each registration
                         ii. insert doctor_disease table
                         iii. insert patient_treatment table
                         iv. insert the patient_doctor table
-                    3. complete a treatment by updating the treatment status
+                    5. complete a treatment by updating the treatment status
                         i. for each treatment, we can update its status
                         ii. if the status is update as terminated or completed, call generate_invoice for the treatment
-                    4. the program is fairly flexible, you can design as you want as long as reasonable
                 '''
         elif identity == _ADMIN:
             command = input(

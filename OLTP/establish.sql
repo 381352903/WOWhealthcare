@@ -49,6 +49,7 @@ CREATE TABLE IF NOT EXISTS `hospital`(
 
 CREATE TABLE IF NOT EXISTS `treatment`(
    `Id` INT UNSIGNED AUTO_INCREMENT,
+   `DoctorId` INT UNSIGNED,
    `TreatmentDate` DATETIME,
    `TreatmentType` VARCHAR(255),
    `ResultStatus` VARCHAR(255),
@@ -79,11 +80,13 @@ CREATE TABLE IF NOT EXISTS `disease`(
 
 CREATE TABLE IF NOT EXISTS `registration`(
    `Id` INT UNSIGNED AUTO_INCREMENT,
+   `TreatmentId` INT UNSIGNED,
    `RegistrationDate` DATETIME,
    `RegistrationNumber` VARCHAR(255),
    `PatientId` INT UNSIGNED,
    `TableLastDate` DATETIME,
    `HasProcessed` BOOLEAN,
+
    PRIMARY KEY ( `Id` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
 

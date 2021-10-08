@@ -4,7 +4,7 @@ from OLTP import databaseService
 def generate_invoice():
     return None
 
-# let it along
+# leave it alone
 def make_payment():
     return None
 
