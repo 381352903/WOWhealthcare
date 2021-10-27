@@ -44,6 +44,7 @@ def insert_record(db_name: str, record: dict):
     cur.execute(sql)
     con.commit()
     print(sql + 'executed')
+    return cur.lastrowid
 
 
 '''
@@ -58,7 +59,7 @@ def insert_record(db_name: str, record: dict):
 '''
 
 
-def update_record(db_name: str, id: int, changes: dict):
+def update_record(db_name: str, id_filter, changes: dict):
     changes['TableLastDate'] = str(get_cur_time())
     entities = ''
     for k, v in changes.items():
@@ -67,7 +68,7 @@ def update_record(db_name: str, id: int, changes: dict):
         else:
             entities += k + " = " + str(v) + ", "
     entities = entities[:-2]
-    sql = "UPDATE " + db_name + " SET " + entities + " WHERE id=" + str(id)
+    sql = "UPDATE " + db_name + " SET " + entities + " WHERE " + str(id_filter)
     cur.execute(sql)
     con.commit()
     print(sql + 'executed')

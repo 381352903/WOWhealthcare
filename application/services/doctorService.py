@@ -10,28 +10,46 @@ def register_doctor():
 
 def initiate_treatment(account_id, registration_id):
     databaseService.show_columns('treatment')
+    print('TreatmentType, DiseaseId are not null')
     treatment_model = main.read_dict()
+    treatment_model['DoctorId'] = account_id
+    treatment_model['TreatmentDate'] = databaseService.get_cur_time()
+    treatment_model['RegistrationId'] = registration_id
+    treatment_model['DoctorId'] = account_id
     treatment_id = databaseService.insert_record('treatment', treatment_model)
     print(databaseService.search_data('treatment', 'DoctorId=' + str(account_id)))
-    # upd ate table: patient_treatment
+    # update table: patient_treatment
     end_registration(registration_id, treatment_id)
 
 def update_treatment(treatment_id):
+    databaseService.show_columns('treatment')
     treatment_model = main.read_dict()
-    databaseService.update_record('treatment', treatment_id, treatment_model)
-    print(databaseService.search_data('treatment', 'Id=' + str(treatment_id)))
+    filter = 'TreatmentId=' + str(treatment_id)
+    databaseService.update_record('treatment', filter, treatment_model)
+    print(databaseService.search_data('treatment', 'TreatmentId=' + str(treatment_id)))
     
 def end_registration(registration_id, treatment_id):
     d = {'HasProcessed': True, 'TreatmentId': treatment_id}
-    databaseService.update_record('registration', int(registration_id), d)
+    filter = 'RegistrationId=' + registration_id
+    databaseService.update_record('registration', filter, d)
 
-def finish_treatment(treatment_id):
-    # generate_invoice()
+def finish_treatment(treatment_id, status: str):
+    d = {'ResultStatus': status}
+    filter = 'TreatmentId=' + str(treatment_id)
+    databaseService.update_record('treatment', filter, d)
+    tmp_data = databaseService.search_data('treatment', 'treatment=' + str(treatment_id))
+    registration_id = tmp_data['RegistrationId']
+    patient_id = tmp_data['PatientId']
+    print('Input the costs for lab_cost, drug_cost, surgery_cost, bed_cost, bill_to_insurance')
+    cost_dict = main.read_dict()
+    generate_invoice(registration_id, patient_id, cost_dict['lab_cost'], cost_dict['drug_cost'], cost_dict['surgery_cost'], cost_dict['bed_cost'], cost_dict['bill_to_insurance'])
+    return None
 
 def diagnose_disease():
+    databaseService.show_columns('disease')
     disease_model = main.read_dict()
     databaseService.insert_record('disease', disease_model)
-    # update table: patient_doctor, doctor_disease, patient_disease
+
 
 def doctor_commands(account_id):
     command = input(
@@ -45,6 +63,7 @@ def doctor_commands(account_id):
             # update registration HasProcessed boolean )
                 # update treatment status  
                     # if completed or terminated, call generate_invoice
+        '3. Registration for a new disease                \n'
     )
     if command == '1':
         # Check all treatment under this doctor
@@ -62,4 +81,6 @@ def doctor_commands(account_id):
         if registration_id != 'no':
             # diagnose a disease 
             initiate_treatment(account_id, registration_id)
-            # update treatment status 
+            # update treatment status
+    elif command == '3':
+        diagnose_disease()

@@ -65,10 +65,10 @@ if __name__ == '__main__':
                             '2. You have an doctor account(Login)                   \n'
                             )
             if command == '1':
-                patientService.register_doctor()
+                doctorService.register_doctor()
             elif command == '2':
                 account_id = int(input('Input your id: \n'))
-                patientService.doctor_commands(account_id)
+                doctorService.doctor_commands(account_id)
                 '''
                     1. Show all treatment under this doctor
                     2. Check available registration
@@ -89,6 +89,8 @@ if __name__ == '__main__':
                             '2. Change your identity        \n'
                             '3. Insert a patient model      \n'
                             '4. Show patient database       \n'
+                            '5. Insert a doctor database    \n'
+                            '6. Show a doctor database      \n'
                             )
             if command == '1':
                 databaseService.show_columns('hospital')
@@ -100,3 +102,8 @@ if __name__ == '__main__':
                 databaseService.insert_record('patient', test_databaseService.PATIENT_MODEL)
             elif command == '4':
                 databaseService.show_data('patient')
+            elif command == '5':
+                databaseService.insert_record('doctor', test_databaseService.DOCTOR_MODEL)
+            elif command == '6':
+                databaseService.show_data('doctor')
+

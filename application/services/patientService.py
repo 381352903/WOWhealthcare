@@ -14,10 +14,11 @@ def register_patient():
     databaseService.insert_record('patient', patient_model)
     databaseService.show_data('patient')
 
+
 def registration_for_treatment(account_id):
     databaseService.show_columns('registration')
     registration_model = {'PatientId': account_id, 'RegistrationDate': str(databaseService.get_cur_time()),
-                          'RegistrationNumber': int(random.random() * _CONSTANT_NUMBER)}
+                          'RegistrationNumber': int(random.random() * _CONSTANT_NUMBER), 'HasProcessed': False, 'TreatmentId': 0}
     databaseService.insert_record('registration', registration_model)
     print('Registered successfully, remember your registration id! You just need to wait for doctors '
           'treatments.\n')
