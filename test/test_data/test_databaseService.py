@@ -20,61 +20,61 @@ HOSPITAL_MODEL3 = {
 
 # Doctor Table 
 DOCTOR_MODEL1 = {
-    'Id': 101, 'Name': 'Dr.Zhang', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(853) 467-3964', 'Specialty': 'Medical Clinic',
+    'DoctorId': 101, 'Name': 'Dr.Zhang', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(853) 467-3964', 'Specialty': 'Medical Clinic',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 400000, 'ContractDate': None,
     'ContractNumber': None, 'WeeklyContractRate': None, 'MinWeeklyHours': None, 'OvertimeRatePerHour': None, 'IsFullTime': True,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL2 = {
-    'Id': 102, 'Name': 'Stephanie', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(441) 866-4376', 'Specialty': 'Medical Clinic',
+    'DoctorId': 102, 'Name': 'Stephanie', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(441) 866-4376', 'Specialty': 'Medical Clinic',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 350000, 'ContractDate': None,
     'ContractNumber': None, 'WeeklyContractRate': None, 'MinWeeklyHours': None, 'OvertimeRatePerHour': None, 'IsFullTime': True,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL3 = {
-    'Id': 103, 'Name': 'Kelly', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(390) 383-2329', 'Specialty': 'Medical Clinic',
+    'DoctorId': 103, 'Name': 'Kelly', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(390) 383-2329', 'Specialty': 'Medical Clinic',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 450000, 'ContractDate': None,
     'ContractNumber': None, 'WeeklyContractRate': None, 'MinWeeklyHours': None, 'OvertimeRatePerHour': None, 'IsFullTime': True,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL4 = {
-    'Id': 104, 'Name': 'George', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(505) 616-4179', 'Specialty': 'Neurology Care',
+    'DoctorId': 104, 'Name': 'George', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(505) 616-4179', 'Specialty': 'Neurology Care',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 300000, 'ContractDate': None,
     'ContractNumber': None, 'WeeklyContractRate': None, 'MinWeeklyHours': None, 'OvertimeRatePerHour': None, 'IsFullTime': True,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL5 = {
-    'Id': 105, 'Name': 'Marion', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(756) 496-3786', 'Specialty': 'Neurology Care',
+    'DoctorId': 105, 'Name': 'Marion', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(756) 496-3786', 'Specialty': 'Neurology Care',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 280000, 'ContractDate': None,
     'ContractNumber': None, 'WeeklyContractRate': None, 'MinWeeklyHours': None, 'OvertimeRatePerHour': None, 'IsFullTime': True,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL6 = {
-    'Id': 106, 'Name': 'Dr.Zhang', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(432) 861-4072', 'Specialty': 'Neurology Care',
+    'DoctorId': 106, 'Name': 'Dr.Zhang', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(432) 861-4072', 'Specialty': 'Neurology Care',
     'HireDate': None, 'YearlyCompensation': None, 'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 1, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL7 = {
-    'Id': 107, 'Name': 'Frank', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(963) 411-5643', 'Specialty': 'Surgery',
+    'DoctorId': 107, 'Name': 'Frank', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(963) 411-5643', 'Specialty': 'Surgery',
     'HireDate': None, 'YearlyCompensation': None, 'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 2, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL8 = {
-    'Id': 108, 'Name': 'Henry', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(344) 497-2106', 'Specialty': 'Surgery',
+    'DoctorId': 108, 'Name': 'Henry', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(344) 497-2106', 'Specialty': 'Surgery',
     'HireDate': None, 'YearlyCompensation': None, 'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 3, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL9 = {
-    'Id': 109, 'Name': 'Maria', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(859) 840-2596', 'Specialty': 'Surgery',
+    'DoctorId': 109, 'Name': 'Maria', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(859) 840-2596', 'Specialty': 'Surgery',
     'HireDate': None, 'YearlyCompensation': None, 'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 4, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL10 = {
-    'Id': 110, 'Name': 'Kyle', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(960) 240-5857', 'Specialty': 'Surgery',
+    'DoctorId': 110, 'Name': 'Kyle', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(960) 240-5857', 'Specialty': 'Surgery',
     'HireDate': None, 'YearlyCompensation': None, 'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 5, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
     'HospitalId': 10002,
