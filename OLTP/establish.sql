@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `doctor`(
    `Specialty` VARCHAR(255) NOT NULL,
    `HireDate` DATETIME NOT NULL,
    `YearlyCompensation` INTEGER NOT NULL,
-   `ContractDate` DATETIME NOT NULL,
+   `ContractDate` DATETIME,
    `ContractNumber` INTEGER,
    `WeeklyContractRate` INTEGER,
    `MinWeeklyHours` INTEGER,

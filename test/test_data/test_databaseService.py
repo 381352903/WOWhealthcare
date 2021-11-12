@@ -21,8 +21,7 @@ HOSPITAL_MODEL3 = {
 # Doctor Table 
 DOCTOR_MODEL1 = {
     'DoctorId': 101, 'Name': 'Dr.Zhang', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(853) 467-3964', 'Specialty': 'Medical Clinic',
-    'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 400000, 'ContractDate': None,
-    'ContractNumber': None, 'WeeklyContractRate': None, 'MinWeeklyHours': None, 'OvertimeRatePerHour': None, 'IsFullTime': True,
+    'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 400000, 'IsFullTime': True,
     'HospitalId': 10002,
 }
 DOCTOR_MODEL2 = {
