@@ -1,3 +1,5 @@
+use WOW;
+
 CREATE TABLE IF NOT EXISTS `patient`(
    `PatientId` INT UNSIGNED AUTO_INCREMENT NOT NULL,
    `Name` VARCHAR(255) NOT NULL,
@@ -119,3 +121,30 @@ CREATE TABLE IF NOT EXISTS `payment`(
    `InvoiceId` INT UNSIGNED NOT NULL,
    PRIMARY KEY ( `PaymentId` )
 )ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+alter table patient partition by range (PatientId) (
+    partition p0 values less than (5),
+    partition p1 values less than (10),
+    partition p2 values less than (15),
+    partition p3 values less than (20),
+    partition p4 values less than (25),
+    partition p5 values less than (30),
+ );
+
+alter table doctor partition by range (DoctorId) (
+    partition p0 values less than (10),
+    partition p1 values less than (20),
+    partition p2 values less than (30),
+    partition p3 values less than (40),
+    partition p4 values less than (50),
+    partition p5 values less than (60),
+ );
+
+alter table treatment partition by range (TreatmentId) (
+    partition p0 values less than (10),
+    partition p1 values less than (20),
+    partition p2 values less than (30),
+    partition p3 values less than (40),
+    partition p4 values less than (50),
+    partition p5 values less than (60),
+ );

@@ -2,9 +2,9 @@ from OLTP import databaseService
 from test.test_data import test_databaseService
 
 if __name__ == '__main__':
-    #databaseService.insert_record('hospital', test_databaseService.HOSPITAL_MODEL1)
-    #databaseService.insert_record('hospital', test_databaseService.HOSPITAL_MODEL2)
-    #databaseService.insert_record('hospital', test_databaseService.HOSPITAL_MODEL3)
+    databaseService.insert_record('hospital', test_databaseService.HOSPITAL_MODEL1)
+    databaseService.insert_record('hospital', test_databaseService.HOSPITAL_MODEL2)
+    databaseService.insert_record('hospital', test_databaseService.HOSPITAL_MODEL3)
 
     databaseService.insert_record('doctor', test_databaseService.DOCTOR_MODEL1)
     databaseService.insert_record('doctor', test_databaseService.DOCTOR_MODEL2)
