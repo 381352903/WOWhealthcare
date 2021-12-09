@@ -18,64 +18,64 @@ HOSPITAL_MODEL3 = {
 # Doctor Table 
 DOCTOR_MODEL1 = {'Name': 'Dr.Zhang', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(853) 467-3964', 'Specialty': 'Medical Clinic',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 400000, 'IsFullTime': True,
-    'HospitalId': 10002,
+    'HospitalId': 2,
 }
 DOCTOR_MODEL2 = {'Name': 'Stephanie', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(441) 866-4376', 'Specialty': 'Medical Clinic',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 350000, 'IsFullTime': True,
-    'HospitalId': 10002,
+    'HospitalId': 2,
 }
 DOCTOR_MODEL3 = {'Name': 'Kelly', 'OfficePhoneNumber': '2129513240', 'PersonalPhoneNumber': '(390) 383-2329', 'Specialty': 'Medical Clinic',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 300000, 'IsFullTime': True,
-    'HospitalId': 10002,
+    'HospitalId': 2,
 }
 DOCTOR_MODEL4 = {'Name': 'George', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(505) 616-4179', 'Specialty': 'Neurology Care',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 400000, 'IsFullTime': True,
-    'HospitalId': 10002,
+    'HospitalId': 2,
 }
 DOCTOR_MODEL5 = {'Name': 'Marion', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(756) 496-3786', 'Specialty': 'Neurology Care',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 200000, 'IsFullTime': True,
-    'HospitalId': 10001,
+    'HospitalId': 1,
 }
 DOCTOR_MODEL6 = {'Name': 'Dr.Zhang', 'OfficePhoneNumber': '2125624141', 'PersonalPhoneNumber': '(432) 861-4072', 'Specialty': 'Oncology',
     'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 1, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
-    'HospitalId': 10002,'YearlyCompensation': 200000,
+    'HospitalId': 2,'YearlyCompensation': 200000,
 }
 DOCTOR_MODEL7 = {'Name': 'Frank', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(963) 411-5643', 'Specialty': 'Surgery',
     'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 2, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
-    'HospitalId': 10001,'YearlyCompensation': 200000,
+    'HospitalId': 1,'YearlyCompensation': 200000,
 }
 DOCTOR_MODEL8 = {'Name': 'Henry', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(344) 497-2106', 'Specialty': 'Surgery',
     'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 3, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
-    'HospitalId': 10001,'YearlyCompensation': 200000,
+    'HospitalId': 1,'YearlyCompensation': 200000,
 }
 DOCTOR_MODEL9 = { 'Name': 'Maria', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(859) 840-2596', 'Specialty': 'Surgery',
     'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 4, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
-    'HospitalId': 10002,'YearlyCompensation': 200000,
+    'HospitalId': 2,'YearlyCompensation': 200000,
 }
 DOCTOR_MODEL10 = {'Name': 'Kyle', 'OfficePhoneNumber': '6469297875', 'PersonalPhoneNumber': '(960) 240-5857', 'Specialty': 'Dental',
     'ContractDate': '2020-09-01 08:00:00',
     'ContractNumber': 5, 'WeeklyContractRate': 70, 'MinWeeklyHours': 20, 'OvertimeRatePerHour': 100, 'IsFullTime': False,
-    'HospitalId': 10003,'YearlyCompensation': 200000,
+    'HospitalId': 3,'YearlyCompensation': 200000,
 }
 DOCTOR_MODEL11 = {'Name': 'Madison', 'OfficePhoneNumber': '6469297874', 'PersonalPhoneNumber': '(960) 240-5859', 'Specialty': 'Dental',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 400000, 'IsFullTime': True,
-    'HospitalId': 10003,
+    'HospitalId': 3,
 }
 DOCTOR_MODEL12 = {'Name': 'Madison', 'OfficePhoneNumber': '6469297874', 'PersonalPhoneNumber': '(960) 240-5859', 'Specialty': 'Dental',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 350000, 'IsFullTime': True,
-    'HospitalId': 10003,
+    'HospitalId': 3,
 }
 DOCTOR_MODEL13 = {'Name': 'Jay', 'OfficePhoneNumber': '6469297878', 'PersonalPhoneNumber': '(960) 240-5852', 'Specialty': 'Ophthalmology',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 400000, 'IsFullTime': True,
-    'HospitalId': 10002,
+    'HospitalId': 2,
 }
 DOCTOR_MODEL13 = {'Name': 'Karen', 'OfficePhoneNumber': '6469297811', 'PersonalPhoneNumber': '(960) 240-5132', 'Specialty': 'Medical Clinic',
     'HireDate': '2020-10-01 08:00:00', 'YearlyCompensation': 500000, 'IsFullTime': True,
-    'HospitalId': 10001,
+    'HospitalId': 1,
 }
 
 # Disease Table
@@ -183,64 +183,84 @@ PATIENT_MODEL8 = {'Name': 'Zion', 'Address': '475 Washington Street', 'PhoneNumb
 
 # Treatment Table
 TREATMENT_MODEL1 = {'DoctorId': 1, 'TreatmentDate': '2021-12-01 16:28:55',
-           'RegistrationId': 1, 'DiseaseId': 1, 'TreatmentType': 'Exam',
+           'RegistrationId': 1, 'DiseaseId': 1, 'TreatmentType': 'Exam', 'ResultStatus': 'Completed',
+            'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL2 = {'DoctorId': 2, 'TreatmentDate': '2021-12-02 16:28:55',
-           'RegistrationId': 2, 'DiseaseId': 1, 'TreatmentType': 'Exam',
+           'RegistrationId': 2, 'DiseaseId': 1, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL3 = {'DoctorId': 3, 'TreatmentDate': '2021-12-03 16:28:55',
-           'RegistrationId': 3, 'DiseaseId': 7, 'TreatmentType': 'Drug',
+           'RegistrationId': 3, 'DiseaseId': 7, 'TreatmentType': 'Drug','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL4 = {'DoctorId': 1, 'TreatmentDate': '2021-12-04 16:28:55',
-           'RegistrationId': 4, 'DiseaseId': 1, 'TreatmentType': 'Drug',
+           'RegistrationId': 4, 'DiseaseId': 1, 'TreatmentType': 'Drug','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL5 = {'DoctorId': 2, 'TreatmentDate': '2021-12-04 16:28:55',
-           'RegistrationId': 5, 'DiseaseId': 1, 'TreatmentType': 'Exam',
+           'RegistrationId': 5, 'DiseaseId': 1, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL6 = {'DoctorId': 3, 'TreatmentDate': '2021-12-05 16:28:55',
-           'RegistrationId': 6, 'DiseaseId': 1, 'TreatmentType': 'Exam',
+           'RegistrationId': 6, 'DiseaseId': 1, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL7 = {'DoctorId': 1, 'TreatmentDate': '2021-12-05 16:28:55',
-           'RegistrationId': 7, 'DiseaseId': 1, 'TreatmentType': 'Exam',
+           'RegistrationId': 7, 'DiseaseId': 1, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL8 = {'DoctorId': 2, 'TreatmentDate': '2021-12-05 16:28:55',
-           'RegistrationId': 8, 'DiseaseId': 1, 'TreatmentType': 'Exam',
+           'RegistrationId': 8, 'DiseaseId': 1, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL9 = {'DoctorId': 10, 'TreatmentDate': '2021-12-06 16:28:55',
-           'RegistrationId': 9, 'DiseaseId': 4, 'TreatmentType': 'Exam',
+           'RegistrationId': 9, 'DiseaseId': 4, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL10 = {'DoctorId': 2, 'TreatmentDate': '2021-12-07 16:28:55',
-           'RegistrationId': 10, 'DiseaseId': 1, 'TreatmentType': 'Exam',
+           'RegistrationId': 10, 'DiseaseId': 1, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL11 = {'DoctorId': 1, 'TreatmentDate': '2021-11-07 16:28:55',
-           'RegistrationId': 11, 'DiseaseId': 6, 'TreatmentType': 'Drug',
+           'RegistrationId': 11, 'DiseaseId': 6, 'TreatmentType': 'Drug','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL12 = {'DoctorId': 1, 'TreatmentDate': '2021-11-08 16:28:55',
-           'RegistrationId': 12, 'DiseaseId': 6, 'TreatmentType': 'Exam',
+           'RegistrationId': 12, 'DiseaseId': 6, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL13 = {'DoctorId': 1, 'TreatmentDate': '2021-11-09 16:28:55',
-           'RegistrationId': 13, 'DiseaseId': 6, 'TreatmentType': 'Exam',
+           'RegistrationId': 13, 'DiseaseId': 6, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL14 = {'DoctorId': 1, 'TreatmentDate': '2021-11-10 16:28:55',
-           'RegistrationId': 14, 'DiseaseId': 6, 'TreatmentType': 'Exam',
+           'RegistrationId': 14, 'DiseaseId': 6, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL15 = {'DoctorId': 3, 'TreatmentDate': '2021-09-03 16:28:55',
-           'RegistrationId': 15, 'DiseaseId': 4, 'TreatmentType': 'Surgery',
+           'RegistrationId': 15, 'DiseaseId': 4, 'TreatmentType': 'Surgery','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL16 = {'DoctorId': 3, 'TreatmentDate': '2021-09-04 16:28:55',
-           'RegistrationId': 16, 'DiseaseId': 4, 'TreatmentType': 'Drug',
+           'RegistrationId': 16, 'DiseaseId': 4, 'TreatmentType': 'Drug','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL17 = {'DoctorId': 1, 'TreatmentDate': '2021-08-04 16:28:55',
-           'RegistrationId': 17, 'DiseaseId': 7, 'TreatmentType': 'Surgery',
+           'RegistrationId': 17, 'DiseaseId': 7, 'TreatmentType': 'Surgery','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL18 = {'DoctorId': 1, 'TreatmentDate': '2021-08-05 16:28:55',
-           'RegistrationId': 18, 'DiseaseId': 7, 'TreatmentType': 'Surgery',
+           'RegistrationId': 18, 'DiseaseId': 7, 'TreatmentType': 'Surgery','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL19 = {'DoctorId': 1, 'TreatmentDate': '2021-08-06 16:28:55',
-           'RegistrationId': 19, 'DiseaseId': 7, 'TreatmentType': 'Exam',
+           'RegistrationId': 19, 'DiseaseId': 7, 'TreatmentType': 'Exam','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 TREATMENT_MODEL20 = {'DoctorId': 7, 'TreatmentDate': '2021-07-06 16:28:55',
-           'RegistrationId': 20, 'DiseaseId': 8, 'TreatmentType': 'Drug',
+           'RegistrationId': 20, 'DiseaseId': 8, 'TreatmentType': 'Drug','ResultStatus': 'Completed',
+'Description': 'The patient came with pain.',
 }
 
 # Registration Table
