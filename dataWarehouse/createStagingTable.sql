@@ -30,4 +30,7 @@ CREATE TABLE DW_FACT (
     treatment_result VARCHAR2(255),
     invoice_id NUMBER,
     is_patient_in_hospital NUMBER(1)
-);
+)
+PARTITION BY HASH(fact_id)
+PARTITIONS 4
+STORE IN (data1, data2, data3, data4);

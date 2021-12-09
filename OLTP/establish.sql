@@ -23,7 +23,7 @@ CREATE TABLE IF NOT EXISTS `doctor`(
    `OfficePhoneNumber` VARCHAR(255),
    `PersonalPhoneNumber` VARCHAR(255) NOT NULL,
    `Specialty` VARCHAR(255) NOT NULL,
-   `HireDate` DATETIME NOT NULL,
+   `HireDate` DATETIME NOT NULL DEFAULT '2020-10-01 08:00:00',
    `YearlyCompensation` INTEGER NOT NULL,
    `ContractDate` DATETIME,
    `ContractNumber` INTEGER,
@@ -75,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `treatment`(
 
 CREATE TABLE IF NOT EXISTS `disease`(
    `DiseaseId` INT UNSIGNED AUTO_INCREMENT,
-   `ICD` INTEGER NOT NULL,
+   `ICD` VARCHAR(255) NOT NULL,
    `Discerption` VARCHAR(255) NOT NULL,
    `Type` VARCHAR(255) NOT NULL,
    `TableLastDate` DATETIME NOT NULL,
