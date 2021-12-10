@@ -36,7 +36,7 @@ err_msg VARCHAR2(32000);
 BEGIN
     MERGE INTO DW_FACT e
     USING STG_FACT s
-    ON (e.fact_id=s.fact_id and e.patient_name=s.patient_name)
+    ON (e.patient_name=s.patient_name)
   WHEN MATCHED THEN
     UPDATE SET
          e.fact_id=s.fact_id,

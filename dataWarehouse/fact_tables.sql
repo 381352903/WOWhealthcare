@@ -8,11 +8,11 @@ CREATE TABLE STG_FACT (
     hospital_name VARCHAR2(255),
     hospital_location VARCHAR2(255),
     disease_type VARCHAR2(255),
-    treatment_date DATE,
+    treatment_date VARCHAR2(255),
     treatment_description VARCHAR2(255),
     treatment_type VARCHAR2(255),
     treatment_result VARCHAR2(255),
-    invoice_id NUMBER,
+    invoice_id VARCHAR2(255),
     is_patient_in_hospital NUMBER(1)
 );
 
@@ -24,13 +24,13 @@ CREATE TABLE DW_FACT (
     hospital_name VARCHAR2(255),
     hospital_location VARCHAR2(255),
     disease_type VARCHAR2(255),
-    treatment_date DATE,
+    treatment_date VARCHAR2(255),
     treatment_description VARCHAR2(255),
     treatment_type VARCHAR2(255),
     treatment_result VARCHAR2(255),
-    invoice_id NUMBER,
+    invoice_id VARCHAR2(255),
     is_patient_in_hospital NUMBER(1)
 )
 PARTITION BY HASH(fact_id)
 PARTITIONS 4
-STORE IN (data1, data2, data3, data4);
+STORE IN (system);
