@@ -13,7 +13,8 @@ CREATE TABLE STG_FACT (
     treatment_type VARCHAR2(255),
     treatment_result VARCHAR2(255),
     invoice_id VARCHAR2(255),
-    is_patient_in_hospital NUMBER(1)
+    is_patient_in_hospital NUMBER(1),
+    payment_amount NUMBER(65535)
 );
 
 CREATE TABLE DW_FACT (
@@ -29,7 +30,8 @@ CREATE TABLE DW_FACT (
     treatment_type VARCHAR2(255),
     treatment_result VARCHAR2(255),
     invoice_id VARCHAR2(255),
-    is_patient_in_hospital NUMBER(1)
+    is_patient_in_hospital NUMBER(1),
+    payment_amount NUMBER(65535)
 )
 PARTITION BY HASH(fact_id)
 PARTITIONS 4

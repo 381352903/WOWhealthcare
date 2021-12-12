@@ -15,12 +15,13 @@ doctor.Name,
 doctor.Specialty,
 hospital.Name,
 hospital.Address,
-disease.Type,
+disease.Discerption,
 treatment.TreatmentDate,
 treatment.Description,
 treatment.TreatmentType,
 treatment.ResultStatus,
-invoice.InvoiceId
+invoice.InvoiceId,
+payment.Amount
 FROM treatment
 LEFT JOIN registration
 ON treatment.RegistrationId = registration.RegistrationId
@@ -34,6 +35,8 @@ LEFT JOIN disease
 ON treatment.DiseaseId = disease.DiseaseId
 LEFT JOIN invoice
 ON registration.RegistrationId = invoice.RegistrationId
+LEFT JOIN payment
+ON treatment.RegistrationId = payment.RegistrationId
 WHERE treatment.TableLastDate > date_sub(curdate(),interval 1 day)
 INTO OUTFILE '/Users/abc/Desktop/shared/dw_fact.csv'
 FIELDS TERMINATED BY ',' ENCLOSED BY '"' ESCAPED BY '"'
